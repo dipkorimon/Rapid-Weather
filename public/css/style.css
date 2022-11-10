@@ -7,11 +7,6 @@
     font-family: 'Piazzolla', sans-serif;
 }
 
-:root {
-    --main-bg: #1e272e;
-    --main-color: #0097e6;
-}
-
 html {
     font-size: 62.5%;
 }
@@ -27,12 +22,12 @@ body {
 }
 
 .main_menu {
-    background-color: var(--main-bg);
+    background-color: rgb(255, 255, 255);
 }
 
 .navbar {
-    color: #fff;
-    background-color: var(--main-bg);
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
     padding: 2rem 0;
 }
 
@@ -40,37 +35,23 @@ body {
     margin-left: 2rem;
 }
 
-.navbar a {
-    color: #fff;
+.navbar #links a {
+    color: rgb(0, 0, 0);
     font-size: 1.8rem;
 }
 
-.navbar a:hover {
-    color: var(--main-color);
+.navbar #links a:hover {
+    color: red;
+    transition: 0.4s;
 }
 
 .navbar-toggler {
-    background-color: grey;
-}
-
-.fa-snowflake {
-    transition: all linear;
-    animation: rot 2s linear infinite;
-    color: var(--main-color);
-}
-
-@keyframes rot {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
+    background-color: black;
 }
 
 /* Main Header */
 .main_header_left {
-    height: 70rem;
+    height: 50rem;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -86,24 +67,16 @@ body {
     text-transform: capitalize;
 }
 
-.main_header_left .text_color {
-    color: var(--main-color);
-}
-
 .main_header_left button {
-    border: none;
-    padding: 0.8rem 1.8rem;
-    font-size: 1.4rem;
-    border-radius: 2rem;
-    text-transform: uppercase;
+    font-size: 2rem;
 }
 
-.main_header_left button:hover {
-    color: var(--main-color);
+.main_header_left .text_color {
+    color: rgb(255, 0, 0);
 }
 
 .main_header_right {
-    height: 70rem;
+    height: 50rem;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -111,15 +84,17 @@ body {
 
 /* Footer */
 footer {
+    display: flex;
+    justify-content: center;
     width: 100%;
-    background-color: var(--main-bg);
+    background-color: rgb(255, 255, 255);
     margin-top: auto;
 }
 
 footer p {
     margin: 0;
     text-align: center;
-    color: #fff;
+    color: rgb(0, 0, 0);
     line-height: 5rem;
     font-size: 1.4rem;
 }
