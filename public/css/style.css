@@ -82,6 +82,15 @@ body {
     flex-direction: column;
 }
 
+/* about page */
+#about_weather h2 {
+    font-size: 30px;
+}
+
+#about_weather p {
+    font-size: 15px;
+}
+
 /* Footer */
 footer {
     display: flex;
