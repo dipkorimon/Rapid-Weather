@@ -21,8 +21,8 @@ app.get("", (req, res) => {
     res.render('index.hbs');
 })
 
-app.get("/about", (req, res) => {
-    res.render('about.hbs');
+app.get("/contact", (req, res) => {
+    res.render('contact.hbs');
 })
 
 app.get("/weather", (req, res) => {
