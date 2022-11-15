@@ -17,16 +17,16 @@ hbs.registerPartials(partials_path);
 app.use(express.static(static_path));
 
 // routing
-app.get("", (req, res) => {
-    res.render('index.hbs');
+app.get("/", (req, res) => {
+    res.render('index');
 })
 
 app.get("/contact", (req, res) => {
-    res.render('contact.hbs');
+    res.render('contact');
 })
 
 app.get("/weather", (req, res) => {
-    res.render("weather.hbs");
+    res.render("weather");
 })
 
 app.get("*", (req, res) => {
