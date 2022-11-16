@@ -26,6 +26,17 @@ span {
     width: 600px;
 }
 
+.contact_form_left {
+    width: 100%;
+    max-width: 300px;
+}
+
+.contact_form_right img {
+    height: 500px;
+    width: 800px;
+}
+
+
 /* Footer */
 .footer {
     position: absolute;
