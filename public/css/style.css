@@ -15,25 +15,19 @@ span {
 }
 
 
-/* index part */
-
-#index_part {
-    margin-top: 50px;
+/* Main Header */
+.main_header_left {
+    height: 550px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
-#index_part img {
-    height: 400px;
-    width: 600px;
-}
-
-.contact_form_left {
-    width: 100%;
-    max-width: 300px;
-}
-
-.contact_form_right img {
-    height: 500px;
-    width: 800px;
+.main_header_right {
+    height: 550px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 
@@ -47,4 +41,16 @@ span {
     background: rgb(17, 17, 17);
     border-top: 13px solid rgb(17, 17, 17);
     text-align: center;
+}
+
+/* Responsive */
+@media(max-width:768px) {
+    .main_header_left {
+        height: auto;
+        margin: 5rem 0;
+    }
+    .main_header_right {
+        height: auto;
+        margin-top: 1rem;
+    }
 }
