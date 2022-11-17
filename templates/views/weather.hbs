@@ -8,29 +8,83 @@
     {{>navbar}}
 
     <!-- Main header -->
-    
-
-    {{!--API info --}}
-
-    <div class="content">
-    <div class="main_content">
-        <form action="">
-            <input type="text" id="cityName" placeholder="Enter your city name">
-            <input type="submit" value="search" id="submitBtn">
-        </form>
+    <div class="container mt-3 mb-3 text-center" style="font-size: 30px;">
+        Search with your city name and get <strong style="color: #0275d8;">Weather</strong> update of your city. 
     </div>
 
-    <div class="tempInformation">
-        <div class="top_layer">
-            <p id="day">Tuesday</p>
-            <p id="today_data">13 Oct</p>
-        </div>
-        <div class="main_layer">
-            <p id="city_name">Get City</p>
-            <div class="middle_layer data-hide">
-                <p id="temp"><span>0</span><sup>0</sup>C</p>
-                <p id="temp_status"><i class="fa-solid fa-cloud"></i></p>
+    <div>
+        <form action="" id="search_bar">
+            <div class="mb-3 search_box">
+                <input type="text" class="form-control" id="cityName" placeholder="Enter your city name">
             </div>
+            <div class="mb-3">
+                <input type="submit" class="btn btn-primary" value="search" id="submitBtn">
+            </div>
+        </form>
+    </div>
+    
+    <div id="about_card">
+        <div class="container">
+            <div class="card">
+                <div class="content">
+                    <div class="contentBx">
+                        <div class="tempInformation">
+                            <div class="top_layer">
+                                <p class="text-primary" style="font-size: 30px; font-weight: bold;">Temperature</p>
+                                <p id="day">Tuesday</p>
+                                <p id="today_data">13 Oct</p>
+                            </div>
+                            <div class="main_layer">
+                                <p id="city_name">Get City</p>
+                                <div class="middle_layer data-hide">
+                                    <p id="temp"><span>0</span><sup>0</sup>C</p>
+                                    <p id="temp_status"><i class="fa-solid fa-cloud"></i></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            <div class="card">
+                <div class="content">
+                    <div class="contentBx">
+                        <div class="tempInformation">
+                            <div class="top_layer">
+                                <p class="text-primary" style="font-size: 30px; font-weight: bold;">Temperature</p>
+                                <p id="day">Tuesday</p>
+                                <p id="today_data">13 Oct</p>
+                            </div>
+                            <div class="main_layer">
+                                <p id="city_name">Get City</p>
+                                <div class="middle_layer data-hide">
+                                    <p id="temp"><span>0</span><sup>0</sup>C</p>
+                                    <p id="temp_status"><i class="fa-solid fa-cloud"></i></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            <div class="card">
+                <div class="content">
+                    <div class="contentBx">
+                        <div class="tempInformation">
+                            <div class="top_layer">
+                                <p class="text-primary" style="font-size: 30px; font-weight: bold;">Temperature</p>
+                                <p id="day">Tuesday</p>
+                                <p id="today_data">13 Oct</p>
+                            </div>
+                            <div class="main_layer">
+                                <p id="city_name">Get City</p>
+                                <div class="middle_layer data-hide">
+                                    <p id="temp"><span>0</span><sup>0</sup>C</p>
+                                    <p id="temp_status"><i class="fa-solid fa-cloud"></i></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
         </div>
     </div>
 
