@@ -30,9 +30,7 @@ app.get("/weather", (req, res) => {
 })
 
 app.get("*", (req, res) => {
-    res.render("404error.hbs", {
-        errorMessage: 'Oops! Page not found'
-    });
+    res.render("404error");
 })
 
 // listening server
