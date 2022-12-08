@@ -5,6 +5,11 @@ const temp = document.getElementById('temp');
 const temp_status = document.getElementById('temp_status');
 const datahide = document.querySelector('.middle_layer');
 const temp_real_val = document.getElementById('temp_real_val');
+const temp_feels_like = document.getElementById('temp_feels_like');
+const temp_temp_min = document.getElementById('temp_temp_min');
+const temp_temp_max = document.getElementById('temp_temp_max');
+const pressure = document.getElementById('pressure');
+const humidity = document.getElementById('humidity');
 
 const getInfo = async(event) => {
     event.preventDefault();
@@ -20,6 +25,11 @@ const getInfo = async(event) => {
             const arrData = [data];
             city_name.innerText = `${arrData[0].name}, ${arrData[0].sys.country}`;
             temp_real_val.innerText = arrData[0].main.temp;
+            temp_feels_like.innerText = arrData[0].main.feels_like;
+            temp_temp_min.innerText = arrData[0].main.temp_min;
+            temp_temp_max.innerText = arrData[0].main.temp_max;
+            pressure.innerText = arrData[0].main.pressure;
+            humidity.innerText = arrData[0].main.humidity;
             const tempMood = arrData[0].weather[0].main;
             if (tempMood == "Clear") {
                 temp_status.innerHTML = "<i class='fa-solid fa-sun'></i>";
