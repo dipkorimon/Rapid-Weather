@@ -21,12 +21,15 @@
                         <h4 class="text-primary">Paul Polman</h4>
                     </div>
                     <div class="col-md-6 col-12 main_header_right">
-                        <img src="images/weather.webp" alt="">
+                        <div class="top_layer d-flex align-items-center justify-content-center">
+                            <img src="images/weather.webp" alt="" style="height: 350px; width: 550px;">
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <p id="date">WED | OCT 13 | 10:49AM</p>
     <hr>
     <div class="container-fluid main_header">
         <div class="row">
@@ -102,6 +105,47 @@
     
     <!-- Footer -->
     {{>footer}}
+
+    <script>
+        const curDate = document.getElementById('date');
+        const getCurrentDay = () => {
+            let weekday = new Array(7);
+            weekday[0] = "Sunday";
+            weekday[1] = "Monday";
+            weekday[2] = "Tuesday";
+            weekday[3] = "Wednesday";
+            weekday[4] = "Thursday";
+            weekday[5] = "Friday";
+            weekday[6] = "Saturday";
+            let currentTime = new Date();
+            let day = weekday[currentTime.getDay()];
+            return day;
+        };
+
+        const getCurrentTime = () => {
+            let months = [
+                "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"
+            ];
+            let now = new Date();
+            let month = months[now.getMonth()];
+            let date = now.getDate();
+            let hours = now.getHours();
+            let mins = now.getMinutes();
+            let year = now.getFullYear();
+            let period = "AM";
+            if (hours > 11) {
+                period = "PM";
+                if (hours > 12) {
+                    hours -= 12; 
+                }
+            }
+            if (mins < 10) {
+                mins = "0" + mins;
+            }
+            return `${month} ${date} | ${year} | ${hours}:${mins} ${period}`;
+        };
+        curDate.innerHTML = getCurrentDay() + " | " + getCurrentTime();
+    </script>
     
 </body>
 </html>

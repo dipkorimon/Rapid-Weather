@@ -34,9 +34,9 @@ const getInfo = async(event) => {
             if (tempMood == "Clear") {
                 temp_status.innerHTML = "<i class='fa-solid fa-sun'></i>";
             } else if (tempMood == "Clouds") {
-                temp_status.innerHTML = "<i class='fa-solid fa-cloud'></i>";
+                temp_status.innerHTML = "<i class='fa-solid fa-cloud text-dark'></i>";
             } else if (tempMood == "Rain") {
-                temp_status.innerHTML = "<i class='fa-solid fa-rain'></i>";
+                temp_status.innerHTML = "<i class='fa-solid fa-rain text-primary'></i>";
             }
             datahide.classList.remove('data_hide');
         } catch {

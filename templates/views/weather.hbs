@@ -19,19 +19,16 @@
             </form>
         </div>
         <div class="tempInformation">
-            <div class="top_layer d-flex align-items-center justify-content-center">
-                <p id="date">WED | OCT 13 | 10:49AM</p>
-            </div>
             <h3 class="text-primary text-center">CurrentTemperature</h3>
             <p id="city_name" class="text-center">City Name Here</p>
             <div class="middle_layer data_hide text-center">
+                <p id="temp_status"><i class="fa-solid fa-sun-plant-wilt"></i></p>
                 <p id="temp">Temperature: <strong id="temp_real_val">0</strong><sup>o</sup> C</p>
                 <p id="temp">Feels Like: <strong id="temp_feels_like">0</strong><sup>o</sup> C</p>
                 <p id="temp">Min Temperature: <strong id="temp_temp_min">0</strong><sup>o</sup> C</p>
                 <p id="temp">Max Temperature: <strong id="temp_temp_max">0</strong><sup>o</sup> C</p>
                 <p id="temp">Pressure: <strong id="pressure">0</strong> Pa</p>
                 <p id="temp">Humidity: <strong id="humidity">0</strong> gm<sup>3</sup></p>
-                <p id="temp_status"><i class="fa-solid fa-cloud"></i></p>
             </div>
 
 
@@ -51,45 +48,5 @@
     
     <script src="js/main.js"></script>
 
-    <script>
-        const curDate = document.getElementById('date');
-        const getCurrentDay = () => {
-            let weekday = new Array(7);
-            weekday[0] = "Sun";
-            weekday[1] = "Mon";
-            weekday[2] = "Tue";
-            weekday[3] = "Wed";
-            weekday[4] = "Thu";
-            weekday[5] = "Fri";
-            weekday[6] = "Sat";
-            let currentTime = new Date();
-            let day = weekday[currentTime.getDay()];
-            return day;
-        };
-
-        const getCurrentTime = () => {
-            let months = [
-                "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
-            ];
-            let now = new Date();
-            let month = months[now.getMonth()];
-            let date = now.getDate();
-            let hours = now.getHours();
-            let mins = now.getMinutes();
-            let year = now.getFullYear();
-            let period = "AM";
-            if (hours > 11) {
-                period = "PM";
-                if (period > 12) {
-                    hours -= 12; 
-                }
-            }
-            if (mins < 10) {
-                mins = "0" + mins;
-            }
-            return `${month} ${date} | ${year} | ${hours}:${mins} ${period}`;
-        };
-        curDate.innerHTML = getCurrentDay() + " | " + getCurrentTime();
-    </script>
 </body>
 </html>
