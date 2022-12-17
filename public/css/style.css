@@ -30,6 +30,14 @@ span {
     flex-direction: column;
 }
 
+
+/* Date & Time */
+#date {
+    font-size: 20px;
+    color: #0275d8;
+}
+
+
 /* Main */
 #about_card .container {
     display: flex;
@@ -164,5 +172,11 @@ span {
     .main_header_right {
         height: auto;
         margin-top: 1rem;
+    }
+}
+
+@media(max-width:768px) {
+    .footer p {
+        font-size: 11px;
     }
 }
