@@ -8,38 +8,40 @@
     {{>navbar}}
 
     <!-- Main header -->
-    <div class="container mt-3 mb-3 text-center" style="font-size: 30px;">
-        Search with your city name and get <strong style="color: #0275d8;">Weather</strong> update of your city. 
-    </div>
-    <div class="container main_header">
-        <div class="main_content d-flex align-items-center justify-content-center mb-3">
-            <form class="temp_form d-flex">
-                <input class="form-control" type="text" id="cityName" placeholder="Enter your city name" style="width: 100%; max-width: 300px; margin-right: 10px;">
-                <input class="btn btn-primary" type="submit" value="Search" id="submitBtn">
-            </form>
-        </div>
-        <div class="tempInformation">
-            <h3 class="text-primary text-center">CurrentTemperature</h3>
-            <p id="city_name" class="text-center">City Name Here</p>
-            <div class="middle_layer data_hide text-center">
-                <p id="temp_status"><i class="fa-solid fa-sun-plant-wilt"></i></p>
-                <p id="temp">Temperature: <strong id="temp_real_val">0</strong><sup>o</sup> C</p>
-                <p id="temp">Feels Like: <strong id="temp_feels_like">0</strong><sup>o</sup> C</p>
-                <p id="temp">Min Temperature: <strong id="temp_temp_min">0</strong><sup>o</sup> C</p>
-                <p id="temp">Max Temperature: <strong id="temp_temp_max">0</strong><sup>o</sup> C</p>
-                <p id="temp">Pressure: <strong id="pressure">0</strong> Pa</p>
-                <p id="temp">Humidity: <strong id="humidity">0</strong> gm<sup>3</sup></p>
-            </div>
-
-
-            {{!-- <div class="main_layer">
-                <h3 class="text-primary">Current temperature</h3>
-                <p id="city_name">Nothing to show here</p>
-                <div class="middle_layer data_hide">
-                    <p id="temp"><strong id="temp_real_val">0</strong><sup>o</sup>C</p>
-                    <p id="temp_status"><i class="fa-solid fa-cloud"></i></p>
+    
+    <div id="about_card">
+        <div class="container">
+            {{!-- Current Weather Data --}}
+            <div class="card">
+                <div class="content">
+                    <div class="imgBx">
+                        <img src="images/currentWeatherData.jpeg" alt="">
+                    </div>
+                    <div class="contentBx">
+                        <h5 class="text-primary text-center">Current Weather Data</h5>
+                        <p style="font-size: 15px; line-height: 17px;">Access current weather data for any location including over 200,000 cities.</p>
+                    </div>
+                    <div class="">
+                        <a href="currentWeatherData"><button type="button" class="btn btn-primary">Check Update</button></a>
+                    </div>
                 </div>
-            </div> --}}
+            </div>   
+
+            {{!-- Hourly Forecast 4 days --}}
+            <div class="card">
+                <div class="content">
+                    <div class="imgBx">
+                        <img src="images/hourlyForecast.jpg" alt="">
+                    </div>
+                    <div class="contentBx">
+                        <h5 class="text-primary text-center">Hourly Forecast 4 days</h5>
+                        <p style="font-size: 15px; line-height: 17px;">Hourly forecast is available for 4 days. Forecast weather data for 96 timestamps.</p>
+                    </div>
+                    <div class="">
+                        <a href="hourlyForecast"><button type="button" class="btn btn-primary">Check Update</button></a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
