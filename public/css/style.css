@@ -34,7 +34,15 @@ span {
 /* Date & Time */
 #date {
     font-size: 20px;
-    color: red;
+}
+
+#city_name {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+#temp {
+    font-size: 25px;
 }
 
 
@@ -55,7 +63,7 @@ span {
     box-shadow: 0.6em 0.6em 1.2em #d2dce9,
                 -0.6em -0.6em 1.2em #d2dce9;
     border-radius: 20px;
-    border-color: #0275d8;
+    border-color: yellowgreen;
 }
 
 #about_card .container .card .content {
@@ -118,7 +126,7 @@ span {
 }
 
 #about_card .container .card .content .sci a:hover {
-    color: #0275d8;
+    color: red;
     transition: .4s;
 }
 
@@ -146,7 +154,7 @@ span {
 }
 
 .main_header_left .sci a:hover {
-    color: #0275d8;
+    color: red;
     transition: .4s;
 }
 
