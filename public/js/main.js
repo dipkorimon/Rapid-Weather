@@ -10,6 +10,7 @@ const temp_temp_min = document.getElementById('temp_temp_min');
 const temp_temp_max = document.getElementById('temp_temp_max');
 const pressure = document.getElementById('pressure');
 const humidity = document.getElementById('humidity');
+const temp_mood = document.getElementById('temp_mood');
 
 const getInfo = async(event) => {
     event.preventDefault();
@@ -30,17 +31,10 @@ const getInfo = async(event) => {
             temp_temp_max.innerText = arrData[0].main.temp_max;
             pressure.innerText = arrData[0].main.pressure;
             humidity.innerText = arrData[0].main.humidity;
-            const tempMood = arrData[0].weather[0].main;
-            if (tempMood == "Clear") {
-                temp_status.innerHTML = "<i class='fa-solid fa-sun'></i>";
-            } else if (tempMood == "Clouds") {
-                temp_status.innerHTML = "<i class='fa-solid fa-cloud text-dark'></i>";
-            } else if (tempMood == "Rain") {
-                temp_status.innerHTML = "<i class='fa-solid fa-rain text-primary'></i>";
-            }
+            temp_mood.innerText = arrData[0].weather[0].main;
             datahide.classList.remove('data_hide');
         } catch {
-            city_name.innerText = `Please write city name properly`;
+            city_name.innerText = `Please write city name properly!`;
             datahide.classList.add('data_hide');
         }
     }

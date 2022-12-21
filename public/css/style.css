@@ -37,7 +37,7 @@ span {
 }
 
 #city_name {
-    font-size: 20px;
+    font-size: 30px;
     font-weight: 500;
 }
 
@@ -186,5 +186,11 @@ span {
 @media(max-width:768px) {
     .footer p {
         font-size: 11px;
+    }
+}
+
+@media(max-width:768px) {
+    #date {
+        font-size: 15px;
     }
 }
