@@ -17,7 +17,6 @@ const getInfo = async(event) => {
     let cityVal = cityName.value;
     if (cityVal === "") {
         city_name.innerText = `Please write city name before search`;
-        datahide.classList.add('data_hide');
     } else {
         try {
             let url = `https://api.openweathermap.org/data/2.5/weather?q=${cityVal}&units=metric&appid=218e0af13968de702922aa542f9bb10a`;
@@ -32,10 +31,8 @@ const getInfo = async(event) => {
             pressure.innerText = arrData[0].main.pressure;
             humidity.innerText = arrData[0].main.humidity;
             temp_mood.innerText = arrData[0].weather[0].main;
-            datahide.classList.remove('data_hide');
         } catch {
             city_name.innerText = `Please write city name properly!`;
-            datahide.classList.add('data_hide');
         }
     }
 }

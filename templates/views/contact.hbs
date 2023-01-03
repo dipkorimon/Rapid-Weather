@@ -16,16 +16,16 @@
             <div class="col-md-10 col-12 mx-auto">
                 <div class="row">
                     <div class="col-md-4 col-12 main_header_left">
-                        <h3>Contact with us via <span>Email</span>:</h3>
-                        <p class="text-danger" style="font-size: 25px;">dipkorimon@gmail.com</p>
-                        <h3><span>Or,</span></h3>
-                        <div class="sci">
-                            <a href="#"><i class="fa-brands fa-facebook" aria-hidden="true"></i></a>
-                            <a href="#"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
-                            <a href="#"><i class="fa-brands fa-twitter" aria-hidden="true"></i></a>
-                            <a href="#"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a>
-                            <a href="#"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
-                        </div>
+                        <form action="" method="post">
+                            <label for="name" class="mb-1">Name: </label>
+                            <input name="Name" id="name" type="name" class="form-control mb-3" style="width: 300px;" placeholder="Write your name" required>
+                            <label for="email" class="mb-1">Email:</label>
+                            <input name="Email" id="email" type="email" class="form-control mb-3" style="width: 300px;" placeholder="Write your email" required>
+                            <label for="email" class="mb-1">Message:</label>
+                            <textarea name="text-area" id="" cols="30" rows="5" class="form-control mb-3" style="width: 300px;" placeholder="Write your message" required></textarea>
+                            <p class="text-secondary">We don't share your information with anyone else.</p>
+                            <button type="submit" class="btn btn-danger" >Submit</button>
+                        </form>
                     </div>
                     <div class="col-md-8 col-12 main_header_right">
                         <img src="images/contact.webp" alt="">
@@ -34,6 +34,7 @@
             </div>
         </div>
     </div>
+    <br>
 
     <!-- Footer -->
     {{>footer}}
