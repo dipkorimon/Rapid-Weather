@@ -27,14 +27,10 @@ app.get("/contact", (req, res) => {
 
 app.get("/weather", (req, res) => {
     res.render("weather");
-})
+}) 
 
 app.get("/currentWeatherData", (req, res) => {
     res.render("currentWeatherData");
-}) 
-
-app.get("/hourlyForecast", (req, res) => {
-    res.render("hourlyForecast");
 }) 
 
 app.get("*", (req, res) => {

@@ -1,40 +1,34 @@
-const cityName = document.getElementById('cityName');
-const submitBtn = document.getElementById('submitBtn');
-const city_name = document.getElementById('city_name')
-const temp = document.getElementById('temp');
-const temp_status = document.getElementById('temp_status');
-const datahide = document.querySelector('.middle_layer');
-const temp_real_val = document.getElementById('temp_real_val');
-const temp_feels_like = document.getElementById('temp_feels_like');
-const temp_temp_min = document.getElementById('temp_temp_min');
-const temp_temp_max = document.getElementById('temp_temp_max');
-const pressure = document.getElementById('pressure');
-const humidity = document.getElementById('humidity');
-const temp_mood = document.getElementById('temp_mood');
+// const { response } = require("express");
 
-const getInfo = async(event) => {
-    event.preventDefault();
-    let cityVal = cityName.value;
-    if (cityVal === "") {
-        city_name.innerText = `Please write city name before search`;
-    } else {
-        try {
-            let url = `https://api.openweathermap.org/data/2.5/weather?q=${cityVal}&units=metric&appid=218e0af13968de702922aa542f9bb10a`;
-            const response = await fetch(url);
-            const data = await response.json();
-            const arrData = [data];
-            city_name.innerText = `${arrData[0].name}, ${arrData[0].sys.country}`;
-            temp_real_val.innerText = arrData[0].main.temp;
-            temp_feels_like.innerText = arrData[0].main.feels_like;
-            temp_temp_min.innerText = arrData[0].main.temp_min;
-            temp_temp_max.innerText = arrData[0].main.temp_max;
-            pressure.innerText = arrData[0].main.pressure;
-            humidity.innerText = arrData[0].main.humidity;
-            temp_mood.innerText = arrData[0].weather[0].main;
-        } catch {
-            city_name.innerText = `Please write city name properly!`;
-        }
-    }
+const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': '78d6de49femsh85f481d9af53a46p127798jsna854a5846d1c',
+		'X-RapidAPI-Host': 'weather-by-api-ninjas.p.rapidapi.com'
+	}
+};
+
+const getWeather = (city) => {
+    cityName.innerHTML = city;
+    fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=' + city, options)
+	.then(response => response.json())
+	.then(response => {
+        console.log(response);
+        cloud_pct.innerHTML = response.cloud_pct
+        temp.innerHTML = response.temp
+        feels_like.innerHTML = response.feels_like
+        humidity.innerHTML = response.humidity
+        min_temp.innerHTML = response.min_temp
+        max_temp.innerHTML = response.max_temp
+        wind_speed.innerHTML = response.wind_speed
+        wind_degrees.innerHTML = response.wind_degrees
+        sunrise.innerHTML = response.sunrise
+        sunset.innerHTML = response.sunset
+    })
+	.catch(err => console.error(err));
 }
 
-submitBtn.addEventListener('click', getInfo);
+submit.addEventListener("click", (e) => {
+    e.preventDefault();
+    getWeather(city.value);
+})
