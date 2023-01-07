@@ -1,34 +1,48 @@
-// const { response } = require("express");
+const cityName = document.getElementById('cityName');
+const submitBtn = document.getElementById('submitBtn');
+const city_name = document.getElementById('city_name');
+const temp = document.getElementById('temp');
+const temp_status = document.getElementById('temp_status');
+const temp_min = document.getElementById('temp_min');
+const temp_max = document.getElementById('temp_max');
+const feels_like = document.getElementById('feels_like');
+const speed = document.getElementById('speed');
+const deg = document.getElementById('deg');
+const gust = document.getElementById('gust');
+const description = document.getElementById('description');
+const pressure = document.getElementById('pressure');
+const humidity = document.getElementById('humidity');
+const country = document.getElementById('country');
 
-const options = {
-	method: 'GET',
-	headers: {
-		'X-RapidAPI-Key': '78d6de49femsh85f481d9af53a46p127798jsna854a5846d1c',
-		'X-RapidAPI-Host': 'weather-by-api-ninjas.p.rapidapi.com'
-	}
-};
 
-const getWeather = (city) => {
-    cityName.innerHTML = city;
-    fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=' + city, options)
-	.then(response => response.json())
-	.then(response => {
-        console.log(response);
-        cloud_pct.innerHTML = response.cloud_pct
-        temp.innerHTML = response.temp
-        feels_like.innerHTML = response.feels_like
-        humidity.innerHTML = response.humidity
-        min_temp.innerHTML = response.min_temp
-        max_temp.innerHTML = response.max_temp
-        wind_speed.innerHTML = response.wind_speed
-        wind_degrees.innerHTML = response.wind_degrees
-        sunrise.innerHTML = response.sunrise
-        sunset.innerHTML = response.sunset
-    })
-	.catch(err => console.error(err));
+const getInfo = async(event) => {
+    event.preventDefault();
+    let cityVal = cityName.value;
+    if (cityVal === "") {
+        city_name.innerText = `Please write city name before search`;
+    } else {
+        try {
+            let url = `https://api.openweathermap.org/data/2.5/weather?q=${cityVal}&units=metric&appid=12dbf2d699361c286a404aad012baf20`;
+            const response = await fetch(url);
+            const data = await response.json();
+            const arrData = [data];
+            city_name.innerText = arrData[0].name;
+            temp.innerText = arrData[0].main.temp;
+            temp_status.innerText = arrData[0].weather[0].main;
+            temp_min.innerText = arrData[0].main.temp_min;
+            temp_max.innerText = arrData[0].main.temp_max;
+            feels_like.innerText = arrData[0].main.feels_like;
+            speed.innerText = arrData[0].wind.speed;
+            deg.innerText = arrData[0].wind.deg;
+            gust.innerText = arrData[0].wind.gust;
+            description.innerText = arrData[0].weather[0].description;
+            pressure.innerText = arrData[0].main.pressure;
+            humidity.innerText = arrData[0].main.humidity;
+            country.innerText = arrData[0].sys.country;
+        } catch {
+            city_name.innerText = `Please write city name properly`;
+        }
+    }
 }
 
-submit.addEventListener("click", (e) => {
-    e.preventDefault();
-    getWeather(city.value);
-})
+submitBtn.addEventListener('click', getInfo);

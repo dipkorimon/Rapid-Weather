@@ -9,29 +9,51 @@
 
     <!-- Main header -->
 
-    <form action="" class="container d-flex" role="search">
-        <input type="search" class="form-control me-2" id="city" placeholder="Search">
-        <button class="btn btn-warning" type="submit" id="submit">Search</button>
-    </form>
+    <p class="text-center mt-3" style="font-size: 30px;">Search with your City Name and find Current Weather Data of your city.</p>
 
-    <h1>Weather for <span id="cityName"></span></h1>
+    <div class="main_content d-flex align-items-center justify-content-center mt-3 mb-3">
+        <form class="temp_form d-flex">
+            <input class="form-control" type="text" id="cityName" placeholder="Enter your city name" style="width: 100%; max-width: 300px; margin-right: 10px;">
+            <input class="btn btn-warning" type="submit" value="Search" id="submitBtn">
+        </form>
+    </div>
 
-    <div class="container d-flex mt-5">
-        <div class="card" >
+    <div class="container text-center">
+        <p id="city_name">City Name</p>
+        <p id="country">Country Name</p>
+    </div>
+    
+
+    <div class="container d-flex col-md-10 col-12 mx-auto" style="gap: 10px;">
+        {{!-- Temperature --}}
+        <div class="card col-md-4 col-12">
             <div class="card-body">
-                <h5 class="card-title">Temperatures</h5>
-                <ul>
-                    <li>Cloud PCT is <span id="cloud_pct"></span></li>
-                    <li>Temperature is <span id="temp"></span></li>
-                    <li>Min Temperature is <span id="min_temp"></span></li>
-                    <li>Max Temperature is <span id="max_temp"></span></li>
-                    <li>Feels Like <span id="feels_like"></span></li>
-                    <li>Humidity is <span id="humidity"></span></li>
-                    <li>Wind speed is <span id="wind_speed"></span></li>
-                    <li>Wind degree is <span id="wind_degrees"></span></li>
-                    <li>Sunrise<span id="sunrise"></span></li>
-                    <li>Sunset <span id="sunset"></span></li>
-                </ul>
+                <h5 class="card-title text-danger text-center">Temperature</h5>
+                <p class="card-subtitle mb-2 text-muted text-center" style="font-size: 40px;"><span class="rapid_weather" id="temp"> </span>&#8451;</p>
+                <p class="text-center" style="font-size: 17px;">Minimum Temperature: <strong id="temp_min"></strong>&#8451;</p>
+                <p class="text-center" style="font-size: 17px;">Maximum Temperature: <strong id="temp_max"></strong>&#8451;</p>
+                <p class="text-center" style="font-size: 17px;">Feels Like: <strong id="feels_like"></strong>&#8451;</p>
+            </div>
+        </div>
+
+
+        <div class="card card col-md-4 col-12">
+            <div class="card-body">
+                <h5 class="card-title text-danger text-center">Wind Speed</h5>
+                <p class="card-subtitle mb-2 text-muted text-center" style="font-size: 40px;"><span class="rapid_weather" id="speed"> </span>km/hour</p>
+                <p class="text-center" style="font-size: 17px;">Wind direction: <strong id="deg"></strong> degree</p>
+                <p class="text-center" style="font-size: 17px;">Wind gust: <strong id="gust"></strong> seconds</p>
+            </div>
+        </div>
+
+
+        <div class="card card col-md-4 col-12">
+            <div class="card-body">
+                <h5 class="card-title text-danger text-center">Description</h5>
+                <p class="card-subtitle mb-2 text-muted text-center" style="font-size: 40px;"><span class="rapid_weather" id="description" style="font-size: 30px;">null</span></p>
+                <p class="text-center" style="font-size: 17px;">Temperature Status: <strong id="temp_status">null</strong></p>
+                <p class="text-center" style="font-size: 17px;">Pressure: <strong id="pressure"></strong> Pa</p>
+                <p class="text-center" style="font-size: 17px;">Humidity: <strong id="humidity"></strong> g.m <sup>-3</sup></p>
             </div>
         </div>
     </div>

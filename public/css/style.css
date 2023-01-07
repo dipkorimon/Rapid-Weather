@@ -14,6 +14,11 @@ span {
     font-size: 25px;
 }
 
+.rapid_weather {
+    font-family: monospace;
+    font-size: 40px;
+}
+
 
 /* Main Header */
 .main_header_left {
@@ -34,15 +39,6 @@ span {
 /* Date & Time */
 #date {
     font-size: 20px;
-}
-
-#city_name {
-    font-size: 30px;
-    font-weight: 500;
-}
-
-#temp {
-    font-size: 25px;
 }
 
 
