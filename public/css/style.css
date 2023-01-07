@@ -95,14 +95,6 @@ span {
     letter-spacing: 1px;
 }
 
-#about_card .container .card .content .contentBx p {
-    color: black;
-    font-size: 1.4rem;
-    /* font-weight: bold; */
-    text-align: center;
-    letter-spacing: 1px;
-}
-
 #about_card .container .card .content .contentBx h5 {
     color: #6c758f;
     font-size: 1.2rem;
