@@ -33,6 +33,10 @@ app.get("/currentWeatherData", (req, res) => {
     res.render("currentWeatherData");
 }) 
 
+app.get("/developer", (req, res) => {
+    res.render("developer");
+}) 
+
 app.get("*", (req, res) => {
     res.render("404error");
 })
