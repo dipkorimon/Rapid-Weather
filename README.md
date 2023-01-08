@@ -26,5 +26,3 @@ Get the latest weather data for any region in the world.
 ![Screenshot from 2023-01-08 22-11-48](https://user-images.githubusercontent.com/73662586/211207135-832983e5-00b4-41ee-b83c-b20d8012d1ad.png)
 
 ![Screenshot from 2023-01-08 21-42-52](https://user-images.githubusercontent.com/73662586/211205808-b04dea61-40c0-487c-a3e8-2321f011dc93.png)
-
-## This project is not yet completed(Running).
