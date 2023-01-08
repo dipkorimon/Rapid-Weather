@@ -21,9 +21,7 @@ Get the latest weather data for any region in the world.
 
 ![Screenshot from 2023-01-08 21-42-04](https://user-images.githubusercontent.com/73662586/211205793-ff56344f-c318-40eb-8043-d27816cb2da5.png)
 
-![Screenshot from 2023-01-08 21-42-30](https://user-images.githubusercontent.com/73662586/211205800-c5d19da1-c5f4-4a9f-95ce-6569712d55b4.png)
-
-![Screenshot from 2023-01-08 21-42-39](https://user-images.githubusercontent.com/73662586/211205806-e868521b-7240-46f9-af7b-87947c4229f4.png)
+![Screenshot from 2023-01-08 22-08-02](https://user-images.githubusercontent.com/73662586/211207019-774fe613-92c4-405c-a611-a9d2c31140dd.png)
 
 ![Screenshot from 2023-01-08 21-42-52](https://user-images.githubusercontent.com/73662586/211205808-b04dea61-40c0-487c-a3e8-2321f011dc93.png)
 
