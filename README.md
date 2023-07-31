@@ -1,4 +1,4 @@
-# Rapid-Weather
+# Rapid Weather
 
 Access current weather data for any location including over 200,000 cities
 We collect and process weather data.
