@@ -14,6 +14,15 @@ Weather applications typically use data from meteorological agencies, weather st
   <li>Radar and Satellite Maps: Displaying real-time radar and satellite imagery to show precipitation patterns, cloud cover, and storms in a particular region.</li>
 </ul>
 
+# Tech Stack
+
+<ul> 
+  <li>HTML</li>
+  <li>CSS</li>
+  <li>JavaScript</li>
+  <li>React.js</li>
+</ul>
+
 # Deployment Link
 
 Coming Soon
