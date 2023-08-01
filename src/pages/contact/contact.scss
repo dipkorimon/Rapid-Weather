@@ -1,0 +1,111 @@
+@import "../../styles/global.scss";
+@import "../../styles/variables.scss";
+
+.contact {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 400px;
+      height: 400px;
+
+      @include mobile {
+        display: none;
+      }
+
+      @include tablet {
+        display: none;
+      }
+    }
+  }
+
+  .right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .contact-form {
+      form {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        width: 350px;
+        gap: 20px;
+
+        @include mobile {
+          width: 250px;
+        }
+
+        label {
+          font-weight: bold;
+          color: $green-color;
+        }
+
+        input {
+          padding: 10px;
+          border: none;
+          border-radius: 5px;
+          background-color: $soft-color;
+          margin-top: -20px;
+
+          &:focus {
+            outline: none;
+          }
+        }
+
+        textarea {
+          padding: 10px;
+          border: none;
+          border-radius: 3px;
+          height: 100px;
+          background-color: $soft-color;
+          margin-top: -20px;
+
+          &:focus {
+            outline: none;
+          }
+        }
+
+        button {
+          padding: 8px 10px;
+          font-size: 17px;
+          border: 2px solid $green-color;
+          background-color: $green-color;
+          border-radius: 10px;
+          color: $white-color;
+          transition: all 0.3s;
+          margin-top: 10px;
+
+          @include mobile {
+            padding: 4px 7px;
+          }
+
+          @include tablet {
+            padding: 5px 8px;
+          }
+
+          &:hover {
+            background-color: transparent;
+            color: $main-color;
+          }
+        }
+      }
+    }
+  }
+}

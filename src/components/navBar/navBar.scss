@@ -3,10 +3,11 @@
 
 .navBar {
   padding: 8px 20px;
-  background-color: $dark-bg;
+  background-color: $white-color;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  // border-bottom: 1px solid $soft-color;
 
   @include mobile {
     display: flex;
@@ -28,15 +29,16 @@
 
     a {
       img {
-      width: 45px;
-      height: 45px;
-      object-fit: cover;
+        width: 45px;
+        height: 45px;
+        object-fit: cover;
       }
 
       h3 {
         transition: all 0.3s;
-        color: $white-color;
+        color: $green-color;
         font-size: 22px;
+        border-radius: 20px;
 
         &:hover {
           color: $green-color;
@@ -47,7 +49,7 @@
   .right {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 5px;
     font-weight: bold;
     font-size: 16px;
 
@@ -58,8 +60,11 @@
     }
 
     a {
-      color: $white-color;
+      color: $green-color;
       transition: all 0.3s;
+      background-color: $white-color;
+      border-radius: 20px;
+      padding: 3px 10px;
 
       @include mobile {
         font-size: 13px;
@@ -67,8 +72,9 @@
 
       &:hover {
         color: $green-color;
+        background-color: $green-color;
+        color: $white-color;
       }
     }
-
   }
 }
