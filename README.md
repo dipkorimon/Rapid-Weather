@@ -1,7 +1,6 @@
 # Rapid Weather
 
-Access current weather data for any location including over 200,000 cities
-We collect and process weather data.
+Access current weather data for any location including over 200,000 cities.
 
 Rapid Weather is a web application that provides users with real-time or forecasted weather information. This application is designed to help users stay informed about current weather conditions, temperature, humidity, wind speed, precipitation, and other relevant meteorological data for a specific location or multiple locations.
 

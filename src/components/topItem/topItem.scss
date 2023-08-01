@@ -1,0 +1,113 @@
+@import "../../styles/global.scss";
+@import "../../styles/variables.scss";
+
+.topItem {
+  display: flex;
+  flex-direction: row;
+  padding: 30px;
+
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .left {
+    display: flex;
+    // align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex: 2;
+    h3 {
+      font-size: 40px;
+
+      @include mobile {
+        font-size: 25px;
+      }
+
+      @include tablet {
+        font-size: 30px;
+      }
+
+      span {
+        color: $green-color;
+      }
+    }
+    p {
+      font-size: 25px;
+
+      @include mobile {
+        font-size: 15px;
+      }
+
+      @include tablet {
+        font-size: 18px;
+      }
+
+      span {
+        font-weight: bold;
+        color: $green-color;
+      }
+    }
+    a {
+      button {
+        padding: 8px 10px;
+        font-size: 17px;
+        border: 2px solid $green-color;
+        background-color: $green-color;
+        border-radius: 10px;
+        color: $white-color;
+        transition: all 0.3s;
+        margin-top: 10px;
+
+        @include mobile {
+          padding: 4px 7px;
+        }
+
+        @include tablet {
+          padding: 5px 8px;
+        }
+
+        &:hover {
+          background-color: transparent;
+          color: $main-color;
+        }
+      }
+    }
+  }
+  .right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include mobile {
+      margin-top: 50px;
+    }
+
+    @include tablet {
+      margin-top: 50px;
+    }
+
+    img {
+      width: 500px;
+      height: 300px;
+
+      @include mobile {
+        width: 300px;
+        height: 200px;
+      }
+
+      @include tablet {
+        width: 400px;
+        height: 250px;
+      }
+    }
+  }
+}

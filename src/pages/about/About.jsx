@@ -8,7 +8,7 @@ const About = () => {
       <ul>
         <li>
           Access current weather data for any location including over{" "}
-          <span>200,000</span> cities We collect and process weather data.
+          <span>200,000</span> cities.
         </li>
         <li>
           Rapid Weather is a web application that provides users with real-time
