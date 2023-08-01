@@ -20,8 +20,8 @@ const About = () => {
         <li>
           Weather applications typically use data from meteorological agencies,
           weather stations, satellites, and weather models to provide accurate
-          and up-to-date information. But this weather application use data from
-          real-time API.
+          and up-to-date information. But this weather application uses data
+          from real-time API.
         </li>
       </ul>
     </div>
