@@ -11,12 +11,11 @@ const About = () => {
           <span>200,000</span> cities We collect and process weather data.
         </li>
         <li>
-          A weather application is a software tool or mobile application that
-          provides users with real-time or forecasted weather information. These
-          applications are designed to help users stay informed about current
-          weather conditions, temperature, humidity, wind speed, precipitation,
-          and other relevant meteorological data for a specific location or
-          multiple locations.
+          Rapid Weather is a web application that provides users with real-time
+          or forecasted weather information. This application is designed to
+          help users stay informed about current weather conditions,
+          temperature, humidity, wind speed, precipitation, and other relevant
+          meteorological data for a specific location or multiple locations.
         </li>
         <li>
           Weather applications typically use data from meteorological agencies,

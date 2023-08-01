@@ -3,7 +3,7 @@
 Access current weather data for any location including over 200,000 cities
 We collect and process weather data.
 
-Rapid Weather is a web application that provides users with real-time or forecasted weather information. These application is designed to help users stay informed about current weather conditions, temperature, humidity, wind speed, precipitation, and other relevant meteorological data for a specific location or multiple locations.
+Rapid Weather is a web application that provides users with real-time or forecasted weather information. This application is designed to help users stay informed about current weather conditions, temperature, humidity, wind speed, precipitation, and other relevant meteorological data for a specific location or multiple locations.
 
 Weather applications typically use data from meteorological agencies, weather stations, satellites, and weather models to provide accurate and up-to-date information. But Rapid Weather use data from real-time API.
 
