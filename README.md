@@ -24,4 +24,5 @@ Weather applications typically use data from meteorological agencies, weather st
 
 # Deployment Link
 
-(Rapid Weather)[https://rapidweather1.netlify.app/]
+[Rapid Weather](https://rapidweather1.netlify.app/)
+
