@@ -65,6 +65,7 @@
       background-color: $white-color;
       border-radius: 20px;
       padding: 3px 10px;
+      transition: all 0.3s;
 
       @include mobile {
         font-size: 13px;
